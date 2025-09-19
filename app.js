@@ -1,15 +1,18 @@
 let amigos = [];
-    function adicionarAmigos() {
-    let nome = getElementById("adicionarAmigos").value.trim();
-    if (nome === "") {
+
+function adicionarAmigo() {
+  const input = document.getElementById("amigo");
+  const nome = input.value.trim();
+
+  if (nome === "") {
     alert("Por favor, insira um nome.");
     return;
-    }
-    amigos.push(nome);
-    input.value = "";
+  }
+
+  amigos.push(nome);
+  input.value = "";
   atualizarLista();
 }
-
 function atualizarLista() {
   const lista = document.getElementById("listaAmigos");
   lista.innerHTML = ""; 
